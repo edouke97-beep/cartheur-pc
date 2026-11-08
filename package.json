@@ -1,0 +1,18 @@
+{
+  "name": "cartheur-assistance-pc",
+  "productName": "CARTHEUR Assistance",
+  "version": "1.0.0",
+  "description": "Assistance a distance CARTHEUR - client Windows",
+  "main": "main.js",
+  "author": "CARTHEUR COMPUTER SERVICE",
+  "license": "UNLICENSED",
+  "scripts": { "start": "electron .", "dist": "electron-builder --win" },
+  "devDependencies": { "electron": "33.2.1", "electron-builder": "25.1.8" },
+  "build": {
+    "appId": "ga.cartheur.assistance.pc",
+    "productName": "CARTHEUR Assistance",
+    "files": ["main.js", "preload.js", "app/**/*"],
+    "win": { "target": [ { "target": "portable", "arch": ["x64"] } ], "signAndEditExecutable": false },
+    "portable": { "artifactName": "CARTHEUR-Assistance-PC.exe" }
+  }
+}
